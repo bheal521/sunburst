@@ -1,0 +1,42 @@
+{
+    "dataRoles": [
+        {
+            "displayName": "Sequence",
+            "name": "Sequence",
+            "kind": "Grouping"
+        },
+		{
+            "displayName": "Frequency",
+            "name": "Frequency",
+            "kind": "Measure"
+        }
+    ],
+    "dataViewMappings": [
+        {
+            "conditions": [
+                {
+                    "Sequence": {
+                    },
+                    "Frequency": {
+                    }
+                }
+            ],
+            "categorical": {
+                "categories": {
+                    "for": {
+                        "in": "Sequence"
+                    }
+                },
+                "values": {
+                    "select": [
+                        {
+                            "bind": {
+                                "to": "Frequency"
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}
